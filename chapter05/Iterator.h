@@ -33,7 +33,7 @@ public:
         ++position;
         return *this;
     }
-    Iterator& operator++(int) {
+    Iterator operator++(int) {
         Iterator old = *this;
         ++position;
         return old;
@@ -42,7 +42,7 @@ public:
         --position;
         return *this;
     }
-    Iterator& operator--(int) {
+    Iterator operator--(int) {
         Iterator old = *this;
         --position;
         return old;

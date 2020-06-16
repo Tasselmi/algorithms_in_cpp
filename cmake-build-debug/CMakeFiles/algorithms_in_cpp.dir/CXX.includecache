@@ -6,11 +6,45 @@
 
 #IncludeRegexTransform: 
 
-/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/ArrayList.cpp
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter01/accumulate.cpp
+algorithm
+-
+iostream
+-
+numeric
+-
+functional
+-
+
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter01/factorial.cpp
+iostream
+-
+
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter01/fibonacci.cpp
+iostream
+-
+
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter01/gcd.cpp
+iostream
+-
+
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter01/permutations.cpp
+iostream
+-
+algorithm
+-
+
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter01/subsets.cpp
+iostream
+-
+algorithm
+-
+
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter05/ArrayList.cpp
 ArrayList.h
-/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/ArrayList.h
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter05/ArrayList.h
 Iterator.h
-/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/Iterator.h
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter05/Iterator.h
 ostream
 -
 algorithm
@@ -18,7 +52,7 @@ algorithm
 numeric
 -
 
-/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/ArrayList.h
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter05/ArrayList.h
 ostream
 -
 sstream
@@ -26,31 +60,31 @@ sstream
 algorithm
 -
 LinearList.h
-/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/LinearList.h
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter05/LinearList.h
 ../exception/myExceptions.h
-/Users/apple/Documents/learn-cpp/algorithms_in_cpp/exception/myExceptions.h
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/exception/myExceptions.h
 Iterator.h
-/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/Iterator.h
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter05/Iterator.h
 changeLength1D.h
-/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/changeLength1D.h
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter05/changeLength1D.h
 
-/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/Iterator.h
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter05/Iterator.h
 iterator
 -
 
-/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/LinearList.h
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter05/LinearList.h
 ostream
 -
 ../exception/myExceptions.h
-/Users/apple/Documents/learn-cpp/algorithms_in_cpp/exception/myExceptions.h
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/exception/myExceptions.h
 
-/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/changeLength1D.h
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter05/changeLength1D.h
 ../exception/myExceptions.h
-/Users/apple/Documents/learn-cpp/algorithms_in_cpp/exception/myExceptions.h
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/exception/myExceptions.h
 cmath
 -
 
-/Users/apple/Documents/learn-cpp/algorithms_in_cpp/exception/myExceptions.h
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/exception/myExceptions.h
 string
 -
 iostream
@@ -58,5 +92,11 @@ iostream
 utility
 -
 exception
+-
+
+/Users/liang/Documents/learn-C++/algorithms_in_cpp/main.cpp
+iostream
+-
+string
 -
 

@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter01/accumulate.cpp" "/Users/apple/Documents/learn-cpp/algorithms_in_cpp/cmake-build-debug/CMakeFiles/algorithms_in_cpp.dir/chapter01/accumulate.cpp.o"
-  "/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter01/factorial.cpp" "/Users/apple/Documents/learn-cpp/algorithms_in_cpp/cmake-build-debug/CMakeFiles/algorithms_in_cpp.dir/chapter01/factorial.cpp.o"
-  "/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter01/fibonacci.cpp" "/Users/apple/Documents/learn-cpp/algorithms_in_cpp/cmake-build-debug/CMakeFiles/algorithms_in_cpp.dir/chapter01/fibonacci.cpp.o"
-  "/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter01/gcd.cpp" "/Users/apple/Documents/learn-cpp/algorithms_in_cpp/cmake-build-debug/CMakeFiles/algorithms_in_cpp.dir/chapter01/gcd.cpp.o"
-  "/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter01/permutations.cpp" "/Users/apple/Documents/learn-cpp/algorithms_in_cpp/cmake-build-debug/CMakeFiles/algorithms_in_cpp.dir/chapter01/permutations.cpp.o"
-  "/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter01/subsets.cpp" "/Users/apple/Documents/learn-cpp/algorithms_in_cpp/cmake-build-debug/CMakeFiles/algorithms_in_cpp.dir/chapter01/subsets.cpp.o"
-  "/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/ArrayList.cpp" "/Users/apple/Documents/learn-cpp/algorithms_in_cpp/cmake-build-debug/CMakeFiles/algorithms_in_cpp.dir/chapter05/ArrayList.cpp.o"
-  "/Users/apple/Documents/learn-cpp/algorithms_in_cpp/main.cpp" "/Users/apple/Documents/learn-cpp/algorithms_in_cpp/cmake-build-debug/CMakeFiles/algorithms_in_cpp.dir/main.cpp.o"
+  "/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter01/accumulate.cpp" "/Users/liang/Documents/learn-C++/algorithms_in_cpp/cmake-build-debug/CMakeFiles/algorithms_in_cpp.dir/chapter01/accumulate.cpp.o"
+  "/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter01/factorial.cpp" "/Users/liang/Documents/learn-C++/algorithms_in_cpp/cmake-build-debug/CMakeFiles/algorithms_in_cpp.dir/chapter01/factorial.cpp.o"
+  "/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter01/fibonacci.cpp" "/Users/liang/Documents/learn-C++/algorithms_in_cpp/cmake-build-debug/CMakeFiles/algorithms_in_cpp.dir/chapter01/fibonacci.cpp.o"
+  "/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter01/gcd.cpp" "/Users/liang/Documents/learn-C++/algorithms_in_cpp/cmake-build-debug/CMakeFiles/algorithms_in_cpp.dir/chapter01/gcd.cpp.o"
+  "/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter01/permutations.cpp" "/Users/liang/Documents/learn-C++/algorithms_in_cpp/cmake-build-debug/CMakeFiles/algorithms_in_cpp.dir/chapter01/permutations.cpp.o"
+  "/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter01/subsets.cpp" "/Users/liang/Documents/learn-C++/algorithms_in_cpp/cmake-build-debug/CMakeFiles/algorithms_in_cpp.dir/chapter01/subsets.cpp.o"
+  "/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter05/ArrayList.cpp" "/Users/liang/Documents/learn-C++/algorithms_in_cpp/cmake-build-debug/CMakeFiles/algorithms_in_cpp.dir/chapter05/ArrayList.cpp.o"
+  "/Users/liang/Documents/learn-C++/algorithms_in_cpp/main.cpp" "/Users/liang/Documents/learn-C++/algorithms_in_cpp/cmake-build-debug/CMakeFiles/algorithms_in_cpp.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
