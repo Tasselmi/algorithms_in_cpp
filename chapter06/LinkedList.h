@@ -97,7 +97,7 @@ Chain<T>::~Chain() {
     while (firstNode != NULL) {
         ChainNode<T>* nextNode = firstNode->next;
         delete firstNode;
-        firstNode = nextNode;
+        firstNode = nextNode
     }
 }
 
