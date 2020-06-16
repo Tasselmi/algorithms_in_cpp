@@ -3,7 +3,10 @@
 //
 
 #include "ArrayList.h"
+#include "Iterator.h"
 #include <ostream>
+#include <algorithm>
+#include <numeric>
 using namespace std;
 
 int main()
@@ -16,6 +19,12 @@ int main()
     arr.insert(0, 20);
     cout << arr << endl;
 
+    auto be = arr.begin();
+    auto en = arr.end();
+    cout << accumulate(be, en, 0) << endl;
+
+    cout << "---------------" << endl;
+
     int* a = new int [5];
     a[0] = 1;
     a[1] = 2;
@@ -26,5 +35,16 @@ int main()
     cout << "elem: " << a[--size] << endl;
     cout << size << endl;
     cout << "elem: " << a[size--] << endl;
-    cout << size;
+    cout << size << endl;
+
+    cout << "---------------" << endl;
+
+    int x[3] = {0, 1, 2};
+    for (int* y = x; y != x + 3; y++) {
+        cout << *y << " ";
+    }
+    cout << endl;
+
+
+    return 0;
 }

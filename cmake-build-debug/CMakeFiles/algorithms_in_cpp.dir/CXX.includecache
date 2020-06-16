@@ -6,13 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter05/ArrayList.cpp
+/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/ArrayList.cpp
 ArrayList.h
-/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter05/ArrayList.h
+/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/ArrayList.h
+Iterator.h
+/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/Iterator.h
 ostream
 -
+algorithm
+-
+numeric
+-
 
-/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter05/ArrayList.h
+/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/ArrayList.h
 ostream
 -
 sstream
@@ -20,25 +26,31 @@ sstream
 algorithm
 -
 LinearList.h
-/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter05/LinearList.h
+/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/LinearList.h
 ../exception/myExceptions.h
-/Users/liang/Documents/learn-C++/algorithms_in_cpp/exception/myExceptions.h
+/Users/apple/Documents/learn-cpp/algorithms_in_cpp/exception/myExceptions.h
+Iterator.h
+/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/Iterator.h
 changeLength1D.h
-/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter05/changeLength1D.h
+/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/changeLength1D.h
 
-/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter05/LinearList.h
+/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/Iterator.h
+iterator
+-
+
+/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/LinearList.h
 ostream
 -
 ../exception/myExceptions.h
-/Users/liang/Documents/learn-C++/algorithms_in_cpp/exception/myExceptions.h
+/Users/apple/Documents/learn-cpp/algorithms_in_cpp/exception/myExceptions.h
 
-/Users/liang/Documents/learn-C++/algorithms_in_cpp/chapter05/changeLength1D.h
+/Users/apple/Documents/learn-cpp/algorithms_in_cpp/chapter05/changeLength1D.h
 ../exception/myExceptions.h
-/Users/liang/Documents/learn-C++/algorithms_in_cpp/exception/myExceptions.h
+/Users/apple/Documents/learn-cpp/algorithms_in_cpp/exception/myExceptions.h
 cmath
 -
 
-/Users/liang/Documents/learn-C++/algorithms_in_cpp/exception/myExceptions.h
+/Users/apple/Documents/learn-cpp/algorithms_in_cpp/exception/myExceptions.h
 string
 -
 iostream

@@ -10,6 +10,7 @@
 #include <algorithm>
 #include "LinearList.h"
 #include "../exception/myExceptions.h"
+#include "Iterator.h"
 #include "changeLength1D.h"
 using namespace std;
 
@@ -36,6 +37,13 @@ public:
     void output(ostream &out) const override;
 
     int capacity() const;
+
+    friend class Iterator<T>;
+    Iterator<T> begin() { return Iterator<T>(element); }
+    Iterator<T> end() { return Iterator<T>(element + listSize); }
+//    class Iterator;
+//    Iterator begin() { return Iterator(element); }
+//    Iterator end() { return Iterator(element + listSize); }
 };
 
 template<typename T>
