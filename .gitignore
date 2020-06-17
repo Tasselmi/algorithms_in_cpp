@@ -1,3 +1,12 @@
 .DS_Store
 .idea
-cmake-build-debug
+
+# ignore build files
+CMakeCache.txt
+CMakeFiles
+Makefile
+cmake_install.cmake
+CTestTestfile.cmake
+*.a
+*.o
+cmake-build-*
