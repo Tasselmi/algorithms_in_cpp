@@ -53,9 +53,14 @@ public:
     void output(ostream &out) const override;
 };
 
+
 template<typename T>
 void Chain<T>::checkIndex(int theIndex) const {
-
+    if (theIndex < 0 || theIndex >= listSize) {
+        ostringstream s;
+        s << "index = " << theIndex << " size = " << size();
+        throw IllegalParameterValue(s.str());
+    }
 }
 
 template<typename T>
@@ -97,7 +102,7 @@ Chain<T>::~Chain() {
     while (firstNode != NULL) {
         ChainNode<T>* nextNode = firstNode->next;
         delete firstNode;
-        firstNode = nextNode
+        firstNode = nextNode;
     }
 }
 
@@ -113,27 +118,77 @@ int Chain<T>::size() const {
 
 template<typename T>
 T &Chain<T>::get(int theIndex) const {
-    return ;
+    checkIndex(theIndex);
+    ChainNode<T>* currentNode = firstNode;
+    for (int i = 0; i < theIndex; ++i) {
+        currentNode = currentNode->next;
+    }
+    return currentNode->element;
 }
 
 template<typename T>
 int Chain<T>::indexOf(const T &theElement) const {
-    return 0;
+    ChainNode<T>* currentNode = firstNode;
+    int idx = 0;
+
+    while (currentNode != NULL && currentNode->element != theElement) {
+        currentNode = currentNode->next;
+        idx++;
+    }
+
+    if (currentNode == NULL) return -1;
+    else return idx;
 }
 
 template<typename T>
 void Chain<T>::erase(int theIndex) {
+    checkIndex(theIndex);
 
+    ChainNode<T>* deleteNode;
+    if (theIndex == 0) {
+        deleteNode = firstNode;
+        firstNode = firstNode->next;
+    } else {
+        ChainNode<T>* p = firstNode;
+        for (int i = 0; i < theIndex - 1; ++i) p = p->next; // theIndex-1 拿到被删除的节点前面一个节点
+        deleteNode = p->next; //被删除的节点
+        p->next = p->next->next; //前一个节点指向被删除的节点后面一个节点
+    }
+
+    listSize--;
+    delete deleteNode; //释放被删除节点的内存
 }
 
 template<typename T>
 void Chain<T>::insert(int theIndex, const T &theElement) {
+    if (theIndex < 0 || theIndex > listSize) {
+        ostringstream s;
+        s << "index = " << theIndex << " size = " << size();
+        throw IllegalParameterValue(s.str());
+    }
 
+    if (theIndex == 0) firstNode = new ChainNode<T>(theElement, firstNode);
+    else {
+        ChainNode<T>* previousNode = firstNode;
+        for (int i = 0; i < theIndex - 1; ++i) {
+            previousNode = previousNode->next;
+        }
+        previousNode->next = new ChainNode<T>(theElement, previousNode->next);
+    }
+
+    listSize++;
 }
 
 template<typename T>
 void Chain<T>::output(ostream &out) const {
+    for (ChainNode<T>* node = firstNode; node != NULL; node = node->next)
+       out << node->element << " ";
+}
 
+template<typename T>
+ostream & operator<<(ostream& out, const Chain<T>& x) {
+    x.output(out);
+    return out;
 }
 
 #endif //ALGORITHMS_IN_CPP_LINKEDLIST_H
