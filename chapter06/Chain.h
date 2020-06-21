@@ -2,28 +2,12 @@
 // Created by Tasselmi liang on 2020/6/16.
 //
 
-#ifndef ALGORITHMS_IN_CPP_LINKEDLIST_H
-#define ALGORITHMS_IN_CPP_LINKEDLIST_H
+#ifndef ALGORITHMS_IN_CPP_CHAIN_H
+#define ALGORITHMS_IN_CPP_CHAIN_H
 
 #include <sstream>
 #include "../chapter05/LinearList.h"
-
-template <typename T>
-struct ChainNode
-{
-    T element;
-    ChainNode<T>* next;
-
-    ChainNode() = default;
-    explicit ChainNode(const T& elem) {
-        element = elem;
-    }
-    ChainNode(const T& elem, ChainNode<T>* nt) {
-        element = elem;
-        next = nt;
-    }
-};
-
+#include "ChainNode.h"
 
 template <typename T>
 class Chain : public LinearList<T>
@@ -39,18 +23,48 @@ public:
     ~Chain();
 
     bool empty() const override;
-
     int size() const override;
-
     T &get(int theIndex) const override;
-
     int indexOf(const T &theElement) const override;
-
     void erase(int theIndex) override;
-
     void insert(int theIndex, const T &theElement) override;
-
     void output(ostream &out) const override;
+
+    class Iterator;
+    Iterator begin() { return Iterator(firstNode); }
+    Iterator end() { return Iterator(); }
+
+    //bin sort 箱排序； shell sort 希尔排序； bucket sort 桶排序；
+    void binSort(int range);
+
+    class Iterator
+    {
+    protected:
+        ChainNode<T>* node;
+
+    public:
+        explicit Iterator(ChainNode<T>* theNode = nullptr) { node = theNode; }
+
+        T& operator*() const { return node->element; }
+        T* operator->() const { return &(node->element); }
+
+        Iterator& operator++() {
+            node = node->next;
+            return *this;
+        }
+        Iterator operator++(int) {
+            auto old = *this;
+            node = node->next;
+            return old;
+        }
+
+        bool operator!=(const Iterator right) const {
+            return node != right.node;
+        }
+        bool operator==(const Iterator right) const {
+            return node == right.node;
+        }
+    };
 };
 
 
@@ -108,12 +122,12 @@ Chain<T>::~Chain() {
 
 template<typename T>
 bool Chain<T>::empty() const {
-    return false;
+    return listSize == 0;
 }
 
 template<typename T>
 int Chain<T>::size() const {
-    return 0;
+    return listSize;
 }
 
 template<typename T>
@@ -186,9 +200,39 @@ void Chain<T>::output(ostream &out) const {
 }
 
 template<typename T>
+void Chain<T>::binSort(int range) {
+    ChainNode<T> **bottom, **top; // ChainNode<T>类型数据的指针数组
+    bottom = new ChainNode<T>* [range + 1];
+    top = new ChainNode<T>* [range + 1];
+    for (int b = 0; b <= range; b++) bottom[b] = nullptr;
+
+    for (; firstNode != nullptr; firstNode = firstNode->next) {
+        int theBin = firstNode->element;
+        if (bottom[theBin] == nullptr) bottom[theBin] = top[theBin] = firstNode;
+        else {
+            top[theBin]->next = firstNode;
+            top[theBin] = firstNode;
+        }
+    }
+
+    ChainNode<T>* y = nullptr;
+    for (int theBin = 0; theBin <= range; theBin++) {
+        if (bottom[theBin] != nullptr) {
+            if (y == nullptr) firstNode = bottom[theBin];
+            else y->next = bottom[theBin];
+            y = top[theBin];
+        }
+    }
+    if (y != nullptr) y->next = nullptr;
+
+    delete [] top;
+    delete [] bottom;
+}
+
+template<typename T>
 ostream & operator<<(ostream& out, const Chain<T>& x) {
     x.output(out);
     return out;
 }
 
-#endif //ALGORITHMS_IN_CPP_LINKEDLIST_H
+#endif //ALGORITHMS_IN_CPP_CHAIN_H

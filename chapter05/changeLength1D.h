@@ -2,6 +2,9 @@
 // Created by Tasselmi liang on 2020/6/15.
 //
 
+#ifndef ALGORITHMS_IN_CPP_CHANGELENGTH1D_H
+#define ALGORITHMS_IN_CPP_CHANGELENGTH1D_H
+
 #include "../exception/myExceptions.h"
 #include <cmath>
 using std::min;
@@ -17,3 +20,5 @@ void changeLength1D(T*& a, int oldLength, int newLength)
     delete [] a;
     a = temp;
 }
+
+#endif

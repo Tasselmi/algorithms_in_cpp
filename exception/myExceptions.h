@@ -11,12 +11,38 @@
 #include <exception>
 using namespace std;
 
+
 class IllegalParameterValue : public exception
 {
 public:
     explicit IllegalParameterValue(string theMessage = "Illegal parameter value") { message = std::move(theMessage); }
     void outputMessage() { cout << message << endl; }
 
+private:
+    string message;
+};
+
+
+class StackEmpty : public exception
+{
+private:
+    string message;
+
+public:
+    StackEmpty(string msg = "Invalid operation on empty stack") {
+        message = msg;
+    }
+    void outputMessage() {
+        cout << message << endl;
+    }
+};
+
+
+class IllegalIndex
+{
+public:
+    IllegalIndex(string theMessage = "Illegal index") { message = theMessage; }
+    void outputMessage() { cout << message << endl; }
 private:
     string message;
 };
