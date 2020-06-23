@@ -51,11 +51,11 @@ bool findPath()
 {
     path = new ArrayStack<position>;
 
-    position offset[4];
-    offset[0].row = 0; offset[0].col = 1;
-    offset[1].row = 1; offset[1].col = 0;
-    offset[2].row = 0; offset[2].col = -1;
-    offset[3].row = -1; offset[3].col = 0;
+    position offset[4]; //存储顺时针方向移动时每个方向的行和列偏移量
+    offset[0].row = 0; offset[0].col = 1; //右
+    offset[1].row = 1; offset[1].col = 0; //下
+    offset[2].row = 0; offset[2].col = -1; //左
+    offset[3].row = -1; offset[3].col = 0; //上
 
     //外围的障碍墙
     for (int i = 0; i <= size + 1; ++i) {
