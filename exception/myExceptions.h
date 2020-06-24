@@ -12,6 +12,16 @@
 using namespace std;
 
 
+class IllegalIndex
+{
+public:
+    IllegalIndex(string theMessage = "Illegal index") { message = theMessage; }
+    void outputMessage() { cout << message << endl; }
+private:
+    string message;
+};
+
+
 class IllegalParameterValue : public exception
 {
 public:
@@ -38,13 +48,16 @@ public:
 };
 
 
-class IllegalIndex
+class QueueEmpty : public exception
 {
 public:
-    IllegalIndex(string theMessage = "Illegal index") { message = theMessage; }
-    void outputMessage() { cout << message << endl; }
+    QueueEmpty(string theMessage =
+    "Invalid operation on empty queue")
+    {message = theMessage;}
+    void outputMessage() {cout << message << endl;}
 private:
     string message;
 };
+
 
 #endif //ALGORITHMS_IN_CPP_MYEXCEPTIONS_H
