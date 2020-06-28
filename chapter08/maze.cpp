@@ -113,11 +113,11 @@ void outputPath()
     }
 }
 
-int main()
-{
-    inputMaze();
-    if (findPath())
-        outputPath();
-    else
-        cout << "No path" << endl;
-}
+//int main()
+//{
+//    inputMaze();
+//    if (findPath())
+//        outputPath();
+//    else
+//        cout << "No path" << endl;
+//}

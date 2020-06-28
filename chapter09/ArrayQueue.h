@@ -86,8 +86,24 @@ void ArrayQueue<T>::pop() {
 template<typename T>
 void ArrayQueue<T>::push(const T &theElement) {
     if ((theBack + 1) % arrayLength == theFront) {
+        T* newQueue = new T[arrayLength * 2];
+        int start = (theFront + 1) % arrayLength;
+        if (start < 2) {
+            copy(queue + start, queue + start + arrayLength - 1, newQueue);
+        } else {
+            copy(queue + start, queue + arrayLength, newQueue);
+            copy(queue, queue + theBack + 1, newQueue + arrayLength - start);
+        }
 
+        theFront = arrayLength * 2 - 1;
+        theBack = arrayLength - 2;
+        arrayLength *= 2;
+        delete [] queue;
+        queue = newQueue;
     }
+
+    theBack = (theBack + 1) % arrayLength;
+    queue[theBack] = theElement;
 }
 
 #endif //ALGORITHMS_IN_CPP_ARRAYQUEUE_H

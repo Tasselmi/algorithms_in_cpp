@@ -8,16 +8,16 @@
 #include <utility>
 using std::pair;
 
-template <typename K, typename E>
-class dictionary
+template <typename K, typename V>
+class Dictionary
 {
 public:
-    virtual ~dictionary() = default;
+    virtual ~Dictionary() = default;
     virtual bool empty() const = 0;
     virtual int size() const = 0;
-    virtual pair<const K, E>* find(const K&) const = 0;
+    virtual pair<const K, V>* find(const K&) const = 0;
     virtual void erase(const K&) = 0;
-    virtual void insert(const pair<const K, E>&) = 0;
+    virtual void insert(const pair<const K, V>&) = 0;
 };
 
 #endif //ALGORITHMS_IN_CPP_DICTIONARY_H
