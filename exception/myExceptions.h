@@ -9,8 +9,11 @@
 #include <iostream>
 #include <utility>
 #include <exception>
-using namespace std;
-
+//using namespace std;
+using std::string;
+using std::cout;
+using std::endl;
+using std::exception;
 
 class IllegalIndex
 {
@@ -53,6 +56,16 @@ class QueueEmpty : public exception
 public:
     QueueEmpty(string theMessage =
     "Invalid operation on empty queue")
+    {message = theMessage;}
+    void outputMessage() {cout << message << endl;}
+private:
+    string message;
+};
+
+class HashTableFull : public exception
+{
+public:
+    HashTableFull(string theMessage ="The hash table is full")
     {message = theMessage;}
     void outputMessage() {cout << message << endl;}
 private:
