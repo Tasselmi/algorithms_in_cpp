@@ -22,7 +22,7 @@ class HashTable {
         int divisor;
 
     public:
-        HashTable(int theDivisor = 11);
+        explicit HashTable(int theDivisor = 11);
         ~HashTable();
         bool empty() const ;
         int size() const;
