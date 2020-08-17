@@ -10,7 +10,8 @@
 #include "Dictionary.h"
 #include "PairNode.h"
 #include <iostream>
-using namespace std;
+//using namespace std;
+using std::ostream;
 
 template<typename K, typename V>
 class SortedChain : public Dictionary<K, V>
